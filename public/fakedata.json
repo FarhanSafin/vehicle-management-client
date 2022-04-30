@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Toyota Corolla",
+        "supplier": "Toyota",
+        "image": "https://i.ibb.co/M9dm1kg/1-1.jpg",
+        "description": "Affordable",
+        "price": 50,
+        "quantity": 100,
+        "sold": 5
+    },
+    {
+        "id": 2,
+        "name": "Nissan Sunny",
+        "supplier": "Nissan",
+        "image": "https://i.ibb.co/M9dm1kg/1-1.jpg",
+        "description": "Affordable",
+        "price": 510,
+        "quantity": 180,
+        "sold": 15
+    },
+    {
+        "id": 3,
+        "name": "Mazda AX-10",
+        "supplier": "Mazda",
+        "image": "https://i.ibb.co/M9dm1kg/1-1.jpg",
+        "description": "Affordable",
+        "price": 550,
+        "quantity": 140,
+        "sold": 55
+    }
+]
