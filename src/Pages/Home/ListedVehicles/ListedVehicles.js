@@ -13,16 +13,19 @@ const ListedVehicles = () => {
 
 
     return (
-        <div>
-            <h3>Availabe Vehicles: {vechicles.length}</h3>
-            {
-                vechicles.map(vehicle => <ListedVehicle
-                key={vehicle.id}
-                vehicle={vehicle}
-                >
+        <div className='container'>
+            <h2 className='text-primary text-center'>Availabe Vehicles: {vechicles.length}</h2>
+            <div className="row">
+                {
+                    vechicles.map(vehicle => <ListedVehicle
+                    key={vehicle.id}
+                    vehicle={vehicle}
+                    >
 
-                </ListedVehicle>)
-            }
+                    </ListedVehicle>)
+                }
+            </div>
+
         </div>
     );
 };
