@@ -7,8 +7,9 @@ import Footer from './Pages/Shared/Footer/Footer';
 import NotFound from './Pages/NotFound/NotFound';
 import Login from './Pages/Login/Login/Login'
 import Registration from './Pages/Registration/Registration';
-import ManageItems from './Pages/ManageItems/ManageItems';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
+import ListedVehicles from './Pages/Home/ListedVehicles/ListedVehicles';
+import Blogs from './Pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -18,11 +19,13 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/registration' element={<Registration></Registration>}></Route>
+        <Route path='/manageitems' element={<ListedVehicles></ListedVehicles>}></Route>
         <Route path='/about' element={<About></About>}></Route>
-        <Route path='/checkout' element={
+        <Route path='' element={
         <RequireAuth>
-          <ManageItems></ManageItems>
+          
         </RequireAuth>
         }>
         </Route>

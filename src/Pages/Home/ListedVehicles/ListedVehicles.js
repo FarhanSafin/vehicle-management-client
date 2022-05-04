@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import useVehicles from '../../../hooks/useVehicles';
 import ListedVehicle from '../ListedVehicle/ListedVehicle';
 
 const ListedVehicles = () => {
 
-    const [vechicles, setVechicles] = useState([]);
-
-    useEffect(()=>{
-        fetch('fakedata.json')
-        .then(res => res.json())
-        .then(data => setVechicles(data));
-    }, [])
+const [vechicles] = useVehicles();
 
 
     return (
@@ -21,7 +15,6 @@ const ListedVehicles = () => {
                     key={vehicle.id}
                     vehicle={vehicle}
                     >
-
                     </ListedVehicle>)
                 }
             </div>

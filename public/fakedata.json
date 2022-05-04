@@ -6,8 +6,7 @@
         "image": "https://i.ibb.co/M9dm1kg/1-1.jpg",
         "description": "Affordable",
         "price": 50,
-        "quantity": 100,
-        "sold": 5
+        "quantity": 100
     },
     {
         "id": 2,
@@ -16,8 +15,7 @@
         "image": "https://i.ibb.co/M9dm1kg/1-1.jpg",
         "description": "Affordable",
         "price": 510,
-        "quantity": 180,
-        "sold": 15
+        "quantity": 180
     },
     {
         "id": 3,
@@ -26,7 +24,33 @@
         "image": "https://i.ibb.co/M9dm1kg/1-1.jpg",
         "description": "Affordable",
         "price": 550,
-        "quantity": 140,
-        "sold": 55
+        "quantity": 140
+    },
+    {
+        "id": 4,
+        "name": "Mazda-100",
+        "supplier": "Mazda",
+        "image": "https://i.ibb.co/M9dm1kg/1-1.jpg",
+        "description": "Affordable",
+        "price": 1550,
+        "quantity": 170
+    },
+    {
+        "id": 5,
+        "name": "Mazda-100",
+        "supplier": "Mazda",
+        "image": "https://i.ibb.co/M9dm1kg/1-1.jpg",
+        "description": "Affordable",
+        "price": 1550,
+        "quantity": 170
+    },
+    {
+        "id": 6,
+        "name": "Mazda-100",
+        "supplier": "Mazda",
+        "image": "https://i.ibb.co/M9dm1kg/1-1.jpg",
+        "description": "Affordable",
+        "price": 1550,
+        "quantity": 170
     }
 ]

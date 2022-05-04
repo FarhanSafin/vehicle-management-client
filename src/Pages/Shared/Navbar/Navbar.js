@@ -16,7 +16,7 @@ const Navbar = () => {
     const routes = [
         {id: 1, name: 'Home', link: '/home'},
         {id: 2, name: 'Blogs', link: '/blogs'},
-        {id: 3, name: 'About Me', link: '/about'}
+        {id: 4, name: 'Inventory', link: '/manageitems'}
     ]
 
     return (
@@ -30,9 +30,6 @@ const Navbar = () => {
                 }
                 {
                     user ? <Button className='btn btn-danger m-3' onClick={handleSignOut}>Sign out</Button> : <></>
-                }
-                {
-                    user ? <Button className='btn btn-danger m-3'>Manage Items</Button> : <></>
                 }
             </ul>
         </nav>
