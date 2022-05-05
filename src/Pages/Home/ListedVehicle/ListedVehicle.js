@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './ListedVehicle.css'
 
 const ListedVehicle = ({vehicle}) => {
-    const {name, image, description, price, quantity, supplier, id} = vehicle;
+    const {name, image, description, price, quantity, supplier, _id} = vehicle;
 
     const navigate = useNavigate();
 
     const showVehicleDetail = () => {
-        const path = `/vehicle/${id}`;
+        const path = `/vehicle/${_id}`;
         navigate(path);
     }
 
@@ -22,7 +22,7 @@ const ListedVehicle = ({vehicle}) => {
             <p className="card-text">Quantity: {quantity}</p>
             <p className="card-text">Supplier: {supplier}</p>
             <p className="card-text">Price: {price}</p>
-            <button onClick={showVehicleDetail}>Manage: {id}</button>
+            <button onClick={showVehicleDetail}>Manage: {_id}</button>
         </div>
         </div>
 

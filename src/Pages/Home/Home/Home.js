@@ -15,7 +15,7 @@ const Home = () => {
             <div className="row">
                 {
                     slicedData.map(slice => <ListedVehicle
-                    key={slice.id}
+                    key={slice._id}
                     vehicle={slice}
                     >
                     </ListedVehicle>)

@@ -6,7 +6,7 @@ const useVehicles = () => {
     const [vechicles, setVechicles] = useState([]);
 
     useEffect(()=>{
-        fetch('fakedata.json')
+        fetch('http://localhost:5000/vehicleList')
         .then(res => res.json())
         .then(data => setVechicles(data));
     }, []);
