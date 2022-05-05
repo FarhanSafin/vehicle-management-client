@@ -1,9 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './ListedVehicle.css'
 
 const ListedVehicle = ({vehicle}) => {
-    const {name, image, description, price, quantity, supplier} = vehicle
+    const {name, image, description, price, quantity, supplier, id} = vehicle;
+
+    const navigate = useNavigate();
+
+    const showVehicleDetail = () => {
+        const path = `/vehicle/${id}`;
+        navigate(path);
+    }
+
     return (
         <div className='col-sm-12 col-md-6 col-lg-4 g-5 card-align'>
                 <div className="card" style={{width: "18rem"}}>
@@ -14,7 +22,7 @@ const ListedVehicle = ({vehicle}) => {
             <p className="card-text">Quantity: {quantity}</p>
             <p className="card-text">Supplier: {supplier}</p>
             <p className="card-text">Price: {price}</p>
-            <Link to="/dhfer"><button>Manage</button></Link>
+            <button onClick={showVehicleDetail}>Manage: {id}</button>
         </div>
         </div>
 

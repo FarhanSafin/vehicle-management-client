@@ -10,6 +10,7 @@ import Registration from './Pages/Registration/Registration';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import ListedVehicles from './Pages/Home/ListedVehicles/ListedVehicles';
 import Blogs from './Pages/Blogs/Blogs';
+import VechileDetail from './Pages/VehicleDetail/VechileDetail';
 
 function App() {
   return (
@@ -23,9 +24,9 @@ function App() {
         <Route path='/registration' element={<Registration></Registration>}></Route>
         <Route path='/manageitems' element={<ListedVehicles></ListedVehicles>}></Route>
         <Route path='/about' element={<About></About>}></Route>
-        <Route path='' element={
+        <Route path='/vehicle/:vehicleId' element={
         <RequireAuth>
-          
+          <VechileDetail></VechileDetail>
         </RequireAuth>
         }>
         </Route>
