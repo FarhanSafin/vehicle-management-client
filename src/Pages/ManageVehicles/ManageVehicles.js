@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import useVehicles from '../../hooks/useVehicles';
 
 const ManageVehicles = () => {
     const [vehicles,setVehicles] = useVehicles();
+
 
     const handleDelete = id => {
         const proceed = window.confirm ('Are you sure?');
@@ -20,13 +21,21 @@ const ManageVehicles = () => {
         }
     }
 
+    const navigate = useNavigate();
+
+    const showVehicleDetail = id => {
+        const path = `/vehicle/${id}`;
+        navigate(path);
+    }
     return (
         <div>
             <h2>Manage your all cars</h2>
             {
                 vehicles.map(vehicle => <div key={vehicle._id}>
                     <img src={vehicle.image} alt="" className='w-25' />
-                    <h4>{vehicle.name}<button onClick={() => handleDelete(vehicle._id)}>X</button></h4>
+                    <h4>{vehicle.name}<button onClick={() => handleDelete(vehicle._id)}>X</button>
+                    <button onClick={() => showVehicleDetail(vehicle._id)}>Manage</button>
+                    </h4>
                 </div>)
             }
             <Link to="/addvehicle"><button>Add new Vehicle</button></Link>
