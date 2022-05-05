@@ -16,10 +16,15 @@ const VehicleDetail = () => {
 
     const updateQuantity = id => {
         const vehicleQuantity = parseInt(vehicle.quantity) - 1;
-        console.log(vehicleQuantity);
+        const newVehicle = {...vehicle, quantity: vehicleQuantity};
+        setVehicle(newVehicle);
         const url = `http://localhost:5000/vehicle/${id}`;
             fetch(url, {
-                method:'PATCH'
+                method:'PATCH',
+                headers:{
+                    'content-type':'application/json'
+                },
+                body: JSON.stringify(newVehicle)
             })
             .then(res => res.json())
             .then(data => {console.log(data)});
