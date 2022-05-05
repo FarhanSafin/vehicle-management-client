@@ -20,7 +20,7 @@ const Home = () => {
                     >
                     </ListedVehicle>)
                 }
-                <Link to="/manageitems"><button>Manage Inventories</button></Link>
+                <Link to="/managevehicles"><button>Manage Inventories</button></Link>
             </div>
             
         </div>
