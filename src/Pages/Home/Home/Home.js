@@ -7,7 +7,7 @@ import ListedVehicle from '../ListedVehicle/ListedVehicle';
 const Home = () => {
 
     const [vechicles] = useVehicles();
-    const slicedData = vechicles.slice(0,4);
+    const slicedData = vechicles.slice(0,3);
 
     return (
         <div>

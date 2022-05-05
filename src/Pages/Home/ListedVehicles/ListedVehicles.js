@@ -3,20 +3,20 @@ import ListedVehicle from '../ListedVehicle/ListedVehicle';
 
 const ListedVehicles = () => {
 
-const [vechicles] = useVehicles();
-
+const [vehicles] = useVehicles();
 
     return (
         <div className='container'>
-            <h2 className='text-primary text-center'>Availabe Vehicles: {vechicles.length}</h2>
+            <h2 className='text-primary text-center'>Availabe Vehicles: {vehicles.length}</h2>
             <div className="row">
                 {
-                    vechicles.map(vehicle => <ListedVehicle
+                    vehicles.map(vehicle => <ListedVehicle
                     key={vehicle._id}
                     vehicle={vehicle}
                     >
                     </ListedVehicle>)
                 }
+                
             </div>
 
         </div>

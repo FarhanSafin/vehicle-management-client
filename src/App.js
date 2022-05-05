@@ -8,9 +8,10 @@ import NotFound from './Pages/NotFound/NotFound';
 import Login from './Pages/Login/Login/Login'
 import Registration from './Pages/Registration/Registration';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
-import ListedVehicles from './Pages/Home/ListedVehicles/ListedVehicles';
 import Blogs from './Pages/Blogs/Blogs';
 import VehicleDetail from './Pages/VehicleDetail/VehicleDetail';
+import ManageVehicles from './Pages/ManageVehicles/ManageVehicles';
+import AddVehicle from './Pages/AddVehicle/AddVehicle';
 
 function App() {
   return (
@@ -21,8 +22,9 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/addvehicle' element={<AddVehicle></AddVehicle>}></Route>
         <Route path='/registration' element={<Registration></Registration>}></Route>
-        <Route path='/managevehicles' element={<ListedVehicles></ListedVehicles>}></Route>
+        <Route path='/managevehicles' element={<ManageVehicles></ManageVehicles>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/vehicle/:vehicleId' element={
         <RequireAuth>

@@ -3,16 +3,16 @@ import { useEffect, useState } from "react";
 
 const useVehicles = () => {
 
-    const [vechicles, setVechicles] = useState([]);
+    const [vehicles, setVehicles] = useState([]);
 
     useEffect(()=>{
         fetch('http://localhost:5000/vehicleList')
         .then(res => res.json())
-        .then(data => setVechicles(data));
+        .then(data => setVehicles(data));
     }, []);
 
 
-    return [vechicles, setVechicles];
+    return [vehicles, setVehicles];
 
     }
 

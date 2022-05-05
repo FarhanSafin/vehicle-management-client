@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 
 const VehicleDetail = () => {
@@ -68,6 +68,7 @@ const VehicleDetail = () => {
                 <input type="number" id='restock-value' placeholder='Restock Amount' {...register("stock")} />
                 <input type="submit" />
             </form>
+            <Link to="/managevehicles"><button>Manage Inventories</button></Link>
         </div>
     );
 };

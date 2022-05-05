@@ -1,5 +1,5 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+
+import {  useNavigate } from 'react-router-dom';
 import './ListedVehicle.css'
 
 const ListedVehicle = ({vehicle}) => {
@@ -25,7 +25,6 @@ const ListedVehicle = ({vehicle}) => {
             <button onClick={showVehicleDetail}>Manage: {_id}</button>
         </div>
         </div>
-
         </div>
 
     );
