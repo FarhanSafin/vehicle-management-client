@@ -20,7 +20,7 @@ const Navbar = () => {
     const routes = [
         {id: 1, name: 'Home', link: '/home'},
         {id: 2, name: 'Blogs', link: '/blogs'},
-        {id: 4, name: 'Inventory', link: '/managevehicles'}
+        {id: 3, name: 'Inventory', link: '/managevehicles'}
     ]
 
     return (
