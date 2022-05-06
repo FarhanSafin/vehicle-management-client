@@ -29,6 +29,7 @@ const AddVehicle = () => {
                 <textarea className='mb-2' placeholder='Des' {...register("description")} />
                 <input className='mb-2' placeholder='Price' type="number" {...register("price")} />
                 <input className='mb-2' placeholder='Quantity' type="number" {...register("quantity")} />
+                <input className='mb-2' placeholder='Email' type="text" {...register("email")} />
                 
                 <input type='submit' value="Add Vehicle" />
             </form>

@@ -12,6 +12,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import VehicleDetail from './Pages/VehicleDetail/VehicleDetail';
 import ManageVehicles from './Pages/ManageVehicles/ManageVehicles';
 import AddVehicle from './Pages/AddVehicle/AddVehicle';
+import MyItems from './Pages/MyItems/MyItems';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/myitems' element={<MyItems></MyItems>}></Route>
+        
         <Route path='/addvehicle' element={<AddVehicle></AddVehicle>}></Route>
         <Route path='/registration' element={<Registration></Registration>}></Route>
         <Route path='/managevehicles' element={<ManageVehicles></ManageVehicles>}></Route>

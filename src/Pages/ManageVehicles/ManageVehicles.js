@@ -27,6 +27,8 @@ const ManageVehicles = () => {
         const path = `/vehicle/${id}`;
         navigate(path);
     }
+
+    
     return (
         <div>
             <h2>Manage your all cars</h2>

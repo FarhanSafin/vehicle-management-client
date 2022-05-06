@@ -62,6 +62,7 @@ const VehicleDetail = () => {
             <h2>Quantity: {vehicle.quantity}</h2>
             <h2>Supplier: {vehicle.supplier}</h2>
             <h2>Sold: {vehicle.sold}</h2>
+            <h2>Admin's Email: {vehicle.email}</h2>
             <button onClick={() => updateQuantity(vehicleId)}>Delivered: {vehicle.name}</button>
             <h1>Restock Item</h1>
             <form onSubmit={handleSubmit(() => onSubmit(vehicleId))}>
