@@ -17,6 +17,21 @@ const Navbar = () => {
          navigate(path);
      }
 
+     const handleMyItems = () => {
+         const path = `/myitems`;
+         navigate(path);
+     }
+
+     const handleAllItems = () => {
+         const path = `/managevehicles`;
+         navigate(path);
+     }
+
+     const handleAddItems = () => {
+         const path = `/addvehicle`;
+         navigate(path);
+     }
+
     const routes = [
         {id: 1, name: 'Home', link: '/home'},
         {id: 2, name: 'Blogs', link: '/blogs'},
@@ -33,7 +48,16 @@ const Navbar = () => {
                     ></Navigate>)
                 }
                 {
-                    user ? <Button className='btn btn-danger m-3' onClick={handleSignOut}>Sign out</Button> : <></>
+                    user ? <Button className='btn btn-danger m-3' onClick={handleSignOut}>Sign Out</Button> : <></>
+                }
+                {
+                    user ? <Button className='btn btn-danger m-3' onClick={handleMyItems}>My Items</Button> : <></>
+                }
+                {
+                    user ? <Button className='btn btn-danger m-3' onClick={handleAllItems}>Manage All Items</Button> : <></>
+                }
+                {
+                    user ? <Button className='btn btn-danger m-3' onClick={handleAddItems}>Add Item</Button> : <></>
                 }
             </ul>
         </nav>

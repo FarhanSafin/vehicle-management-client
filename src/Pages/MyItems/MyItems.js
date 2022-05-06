@@ -8,6 +8,7 @@ import Loading from '../Shared/Loading/Loading';
 const MyItems = () => {
     const [user, loading] = useAuthState(auth);
     const [vehicles, setVehicles] = useState([]);
+
     if(loading)
     {
         return <Loading></Loading>
@@ -18,6 +19,21 @@ const MyItems = () => {
             .then(data => {setVehicles(data)});
     }
 
+    const handleDelete = id => {
+        const proceed = window.confirm ('Are you sure?');
+        if(proceed){
+            const url = `http://localhost:5000/vehicle/${id}`;
+            fetch(url, {
+                method: 'DELETE',
+            })
+            .then(res => res.json())
+            .then(data => {
+                const remaining = vehicles.filter(vehicle => vehicle._id !== id);
+                setVehicles(remaining);
+            })
+        }
+    }
+
     return (
         <div>
             <h2>Name: {user.email}</h2>
@@ -25,8 +41,10 @@ const MyItems = () => {
                 vehicles.map(vehicle => 
                 <div key={vehicle._id}>
                     <h4>{vehicle.name}</h4>
+                    <button onClick={() => handleDelete(vehicle._id)}>X</button>
                 </div>)
             }
+            
         </div>
     );
 };

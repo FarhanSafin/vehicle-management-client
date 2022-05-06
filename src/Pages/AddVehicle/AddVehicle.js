@@ -2,12 +2,15 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import auth from '../../firebase.init';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 const AddVehicle = () => {
-    const [user, loading] = useAuthState(auth);
+    const [user] = useAuthState(auth);
     const { register, handleSubmit } = useForm();
+    const navigate = useNavigate();
     const onSubmit = data => {
-        console.log(data)
         const url = `http://localhost:5000/addvehicle`;
         fetch(url, { 
             method: 'POST',
@@ -18,10 +21,14 @@ const AddVehicle = () => {
         })
         .then(res => res.json())
         .then(result => {
-            console.log(result);
+            alert('Car Added');
+            const path = `/myitems`;
+            navigate(path);
         })
 
     };
+
+
     return (
         <div className='w-50 mx-auto'>
             <h2>Please add a service</h2>
@@ -35,6 +42,7 @@ const AddVehicle = () => {
                 <input className='mb-2' value={`${user.email}`} type="text" {...register("email")} />
                 <input type='submit' value="Add Vehicle" />
             </form>
+            <ToastContainer />
         </div>
     );
 };
