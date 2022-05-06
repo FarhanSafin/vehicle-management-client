@@ -8,6 +8,7 @@ import SocialLogin from '../Login/SocialLogin/SocialLogin';
 import Loading from '../Shared/Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useToken from '../../hooks/useToken';
 
 const Registration = () => {
 
@@ -30,6 +31,7 @@ const Registration = () => {
   
     const emailRef = useRef('');
     const passwordRef = useRef('');
+    const [token] = useToken(user);
   
     const handleRegister = async (event) => {
           event.preventDefault();
@@ -40,7 +42,7 @@ const Registration = () => {
           await updateProfile({ displayName});
       }
   
-    useEffect( () => {if(user){
+    useEffect( () => {if(token){
         navigate('/home')
       }},[user]);
   

@@ -14,9 +14,14 @@ const MyItems = () => {
         return <Loading></Loading>
     }else{
         const url = `http://localhost:5000/myItems?email=${user.email}`;
-            fetch(url)
+            fetch(url, {
+                headers:{
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
             .then(res => res.json())
             .then(data => {setVehicles(data)});
+
     }
 
     const handleDelete = id => {
