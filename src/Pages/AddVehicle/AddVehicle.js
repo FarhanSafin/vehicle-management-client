@@ -31,16 +31,25 @@ const AddVehicle = () => {
 
     return (
         <div className='w-50 mx-auto'>
-            <h2>Please add a service</h2>
-            <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
+            <h2 className='text-center mt-5'>Please add a service</h2>
+            <form className='d-flex flex-column mt-4' onSubmit={handleSubmit(onSubmit)}>
+                <label className='text-secondary'><h5>Vehicle's Name</h5></label>
                 <input className='mb-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
+                <label className='text-secondary'><h5>Vehicle's Supplier</h5></label>
                 <input className='mb-2' placeholder='Supplier' {...register("supplier", { required: true, maxLength: 20 })} />
+                <label className='text-secondary'><h5>Vehicle's Image</h5></label>
                 <input className='mb-2' placeholder='PhotoURL' type="text" {...register("image")} />
-                <textarea className='mb-2' placeholder='Des' {...register("description")} />
+                <label className='text-secondary'><h5>Vehicle's Description</h5></label>
+                <textarea className='mb-2' placeholder='Description' {...register("description")} />
+                <label className='text-secondary'><h5>Vehicle's Price</h5></label>
                 <input className='mb-2' placeholder='Price' type="number" {...register("price")} />
+                <label className='text-secondary'><h5>Vehicle's Quantity</h5></label>
                 <input className='mb-2' placeholder='Quantity' type="number" {...register("quantity")} />
+                <label className='text-secondary'><h5>Vehicle Sold</h5></label>
+                <input className='mb-2' value={0} placeholder='Sold' type="number" {...register("sold")} />
+                <label className='text-secondary'><h5>Admin's Email</h5></label>
                 <input className='mb-2' value={`${user.email}`} type="text" {...register("email")} />
-                <input type='submit' value="Add Vehicle" />
+                <input className='btn btn-success mt-4' type='submit' value="Add Vehicle" />
             </form>
             <ToastContainer />
         </div>

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import './VehicleDetail.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const VehicleDetail = () => {
     const { register, handleSubmit } = useForm();
@@ -19,19 +21,27 @@ const VehicleDetail = () => {
 
     //delivering vehicle
     const updateQuantity = id => {
-        const vehicleQuantity = parseInt(vehicle.quantity) - 1;
-        const newVehicle = {...vehicle, quantity: vehicleQuantity};
-        setVehicle(newVehicle);
-        const url = `http://localhost:5000/vehicle/${id}`;
-            fetch(url, {
-                method:'PATCH',
-                headers:{
-                    'content-type':'application/json'
-                },
-                body: JSON.stringify(newVehicle)
-            })
-            .then(res => res.json())
-            .then(data => {alert('Vehicle Delivered')});
+        const vehicleQuantity = parseInt(vehicle.quantity);
+        const soldQuantity = parseInt(vehicle.sold);
+
+        if(vehicleQuantity === 0){
+            return toast('Stock Out')
+        }else{
+            const newQuantity = vehicleQuantity - 1;
+            const newSold = soldQuantity + 1;
+            const newVehicle = {...vehicle, quantity: newQuantity, sold: newSold};
+            setVehicle(newVehicle);
+            const url = `http://localhost:5000/vehicle/${id}`;
+                fetch(url, {
+                    method:'PATCH',
+                    headers:{
+                        'content-type':'application/json'
+                    },
+                    body: JSON.stringify(newVehicle)
+                })
+                .then(res => res.json())
+                .then(data => {alert('Vehicle Delivered')});
+        }
     }
 
     //adding in stock
@@ -61,6 +71,7 @@ const VehicleDetail = () => {
             <h3>Description: {vehicle.description}</h3>
             <h3>Price: {vehicle.price}</h3>
             <h3>Quantity: {vehicle.quantity}</h3>
+            <h3>Sold: {vehicle.sold}</h3>
             <h3>Supplier: {vehicle.supplier}</h3>
             <h3>Admin's Email: {vehicle?.email}</h3>
             <button className='btn btn-success' onClick={() => updateQuantity(vehicleId)}>Delivered: {vehicle.name}</button>
@@ -71,6 +82,7 @@ const VehicleDetail = () => {
                 <input className='btn btn-warning ms-3' type="submit" />
             </form>
             <Link className='button-design' to="/managevehicles"><button className='mt-5 btn btn-secondary'>Manage All Vehicles</button></Link>
+            <ToastContainer />
         </div>
     );
 };
