@@ -23,7 +23,6 @@ const VehicleDetail = () => {
     const updateQuantity = id => {
         const vehicleQuantity = parseInt(vehicle.quantity);
         const soldQuantity = parseInt(vehicle.sold);
-
         if(vehicleQuantity === 0){
             return toast('Stock Out')
         }else{
