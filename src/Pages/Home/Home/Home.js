@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import useVehicles from '../../../hooks/useVehicles';
 import Banner from '../Banner/Banner';
 import ListedVehicle from '../ListedVehicle/ListedVehicle';
+import './Home.css'
 
 const Home = () => {
 
@@ -12,7 +13,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <div className="row">
+            <div className="row home">
                 {
                     slicedData.map(slice => <ListedVehicle
                     key={slice._id}
