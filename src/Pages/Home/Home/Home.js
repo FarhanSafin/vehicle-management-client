@@ -8,7 +8,7 @@ import './Home.css'
 const Home = () => {
 
     const [vechicles] = useVehicles();
-    const slicedData = vechicles.slice(0,3);
+    const slicedData = vechicles.slice(0,6);
 
     return (
         <div>
@@ -21,7 +21,7 @@ const Home = () => {
                     >
                     </ListedVehicle>)
                 }
-                <Link to="/managevehicles"><button>Manage Inventories</button></Link>
+                <Link className='text-center mt-5' to="/managevehicles"><button className='btn btn-secondary'>Manage All Vehicles</button></Link>
             </div>
             
         </div>

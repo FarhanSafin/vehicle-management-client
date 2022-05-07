@@ -41,7 +41,7 @@ const MyItems = () => {
     }
 
     return (
-        <div className=''>
+        <div>
             <h2 className='text-center mt-4'>Admin's Email: {user.email}</h2>
             <table className="table table-dark mt-5 container">
             <thead>

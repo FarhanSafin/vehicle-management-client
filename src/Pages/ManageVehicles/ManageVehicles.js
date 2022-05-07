@@ -68,7 +68,7 @@ const ManageVehicles = () => {
 
                 </div>)
             }
-            <Link to="/addvehicle"><button>Add new Vehicle</button></Link>
+            <Link className='button-design' to="/addvehicle"><button className='btn btn-secondary'>Add new Vehicle</button></Link>
         </div>
     );
 };

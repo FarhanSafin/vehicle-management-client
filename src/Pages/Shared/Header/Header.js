@@ -27,10 +27,11 @@ const Header = () => {
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
     <CustomLink  as={Link} to='home'>Home</CustomLink>
-    <CustomLink className="ms-3" as={Link} to='about'>About</CustomLink>
+    
       <CustomLink className="ms-3" as={Link} to='blogs'>
         Blog
       </CustomLink>
+      <CustomLink className="ms-3" as={Link} to='about'>About</CustomLink>
     </Nav>
     {
                                 user && <>
@@ -47,7 +48,7 @@ const Header = () => {
                                 <CustomLink as={Link} to="login">
                                 Login
                             </CustomLink>
-                              <CustomLink as={Link} to="registration">
+                              <CustomLink className="ms-3" as={Link} to="registration">
                                 Registration
                             </CustomLink></Nav>
                             }

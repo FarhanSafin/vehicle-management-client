@@ -59,7 +59,7 @@ const Registration = () => {
   
     return (
         <div className='register-form'>
-          <h2 style={{ textAlign: 'center' }} className='text-primary'>Please Register</h2>
+          <h2 style={{ textAlign: 'center' }}>Please Register</h2>
           <Form onSubmit={handleRegister}>
             <Form.Group className="mb-3" controlId="formBasicName">
             <Form.Label>Name</Form.Label>
@@ -82,7 +82,7 @@ const Registration = () => {
             Register
           </Button>
           </Form>
-          <p className='mb-5 mt-3'>Already have an account? <Link to="/login" className='text-primary' onClick={navigateLogin}>Please Login</Link></p>
+          <p className='mb-5 mt-3'>Already have an account? <button className='btn btn-link text-primary text-decoration-none' onClick={navigateLogin}>Please Login</button></p>
           <SocialLogin></SocialLogin>
           <ToastContainer />
         </div>
