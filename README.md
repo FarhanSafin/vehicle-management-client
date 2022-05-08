@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Vehicle Management Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+WareHouse Management Service [Live Preview](https://manage-inventory-system.web.app/home).
 
-## Available Scripts
+## Features and Functionalities
 
-In the project directory, you can run:
+In the project, you can manage the vehicles available in the warehouse. You can see all the vehicle available in the warehouse once you are logged in using you email/password or google account. You can also see your added items in the warehouse. You can also add vehicles to the warehouse if needed. You can manage a single vehicle if needed after selecting a specific vehicle from the manage item list. You can restock the vehicle as well as click delivered if one vehicle is sold from the warehouse.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+In Short :
+ * See and review all the vehicles available to see
+ * Click delivered and get new amount of vehicle's available
+ * Restock vehicle if needed
+ * Add new vehicle according to need
+ * Use google account to sign in
+ 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+### `React`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A JavaScript library for building user interfaces
 
-### `npm run build`
+### `Bootstrap`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Used to quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `React-Router`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+With React Router, routing through page is easier. Help you to route through different pages of a web app. Nested routes add both segments to the URL and layouts to the UI hierarchy. As the URL changes, your layouts automatically change with it.
 
-### `npm run eject`
+### `React-Toastify`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+React-Toastify allows you to add notifications to your app with ease.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `Firebase`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Firebase helps you build and run successful apps. In this web app firebase takes care of the authentication and authorization system. It is backed by Google.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### `React Hook Form`
 
-## Learn More
+You can take input from the user using react hook form. It makes life easier of the developer as it is easy to implement.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `Json Web Token`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties. Used to secure API.
 
-### Code Splitting
+### `Axios`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Axios is a promise-based HTTP Client for node.js and the browser. Used to fetch data.
