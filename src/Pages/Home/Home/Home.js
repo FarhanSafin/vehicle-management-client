@@ -30,9 +30,9 @@ const Home = () => {
                     }
                     
                     <Link className='text-center mt-5' to="/managevehicles"><button className='btn btn-secondary'>Manage All Vehicles</button></Link>
-                    <h1 className='text-center mt-5'>Our History and Motivation</h1>
+                    <h2 className='text-center mt-5'>Our History and Motivation</h2>
                     <HistoryTeller></HistoryTeller>
-                    <h1 className='text-center mt-5'>Our Recent Sales</h1>
+                    <h2 className='text-center mt-5'>Our Recent Sales</h2>
                     <Sales></Sales>
                 </div>
                 
