@@ -31,7 +31,6 @@ const Header = () => {
       <CustomLink className="ms-3" as={Link} to='blogs'>
         Blog
       </CustomLink>
-      <CustomLink className="ms-3" as={Link} to='about'>About</CustomLink>
     </Nav>
     {
                                 user && <>
