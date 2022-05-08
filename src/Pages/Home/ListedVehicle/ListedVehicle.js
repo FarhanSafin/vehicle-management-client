@@ -13,9 +13,9 @@ const ListedVehicle = ({vehicle}) => {
     }
 
     return (
-        <div className='col-sm-12 col-md-6 col-lg-4 g-5 card-align'>
+        <div className='col-sm-12 col-md-6 col-lg-4 g-5 card-align text-center'>
                 <div className="card mx-auto" style={{width: "18rem"}}>
-        <img src={image} className="" alt="vehicle"/>
+        <img src={image} className="carimage" alt="vehicle"/>
         <div className="card-body">
             <h5 className="card-title">Name: {name}</h5>
             <p className="card-text">Description: {description}</p>
