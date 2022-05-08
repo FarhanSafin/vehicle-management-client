@@ -18,7 +18,6 @@ const [vehicles] = useVehicles();
                 }
                 
             </div>
-
         </div>
     );
 };

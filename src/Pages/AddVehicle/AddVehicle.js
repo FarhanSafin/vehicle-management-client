@@ -2,8 +2,6 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import auth from '../../firebase.init';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 
 const AddVehicle = () => {
@@ -51,7 +49,6 @@ const AddVehicle = () => {
                 <input className='mb-2' value={`${user.email}`} type="text" {...register("email")} />
                 <input className='btn btn-success mt-4' type='submit' value="Add Vehicle" />
             </form>
-            <ToastContainer />
         </div>
     );
 };
