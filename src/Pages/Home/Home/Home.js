@@ -19,6 +19,7 @@ const Home = () => {
         return (
             <div>
                 <Banner></Banner>
+                <h2 className='text-center mt-5 mb-2'>Available Vehicles</h2>
                 <div className="row home">
                     {
                         slicedData.map(slice => <ListedVehicle

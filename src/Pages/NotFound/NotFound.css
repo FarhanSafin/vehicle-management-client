@@ -7,8 +7,12 @@
 }
 svg{
     width: clamp(300px , 70% , 600px);
-    height: 500px;
+    
   
+}
+
+.vectoricon{
+    height: 500px;
 }
 #rocket{
     
@@ -52,6 +56,5 @@ svg{
     }
 }
 a{
-    color:#F66947;
     text-decoration: none;
 }
