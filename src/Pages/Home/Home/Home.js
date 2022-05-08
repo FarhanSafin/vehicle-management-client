@@ -4,8 +4,9 @@ import useVehicles from '../../../hooks/useVehicles';
 import Banner from '../Banner/Banner';
 import Loading from '../../Shared/Loading/Loading';
 import ListedVehicle from '../ListedVehicle/ListedVehicle';
-
 import './Home.css'
+import HistoryTeller from '../../HistoryTeller/HistoryTeller';
+import Sales from '../../Sales/Sales';
 
 const Home = () => {
 
@@ -26,7 +27,12 @@ const Home = () => {
                         >
                         </ListedVehicle>)
                     }
+                    
                     <Link className='text-center mt-5' to="/managevehicles"><button className='btn btn-secondary'>Manage All Vehicles</button></Link>
+                    <h1 className='text-center mt-5'>Our History and Motivation</h1>
+                    <HistoryTeller></HistoryTeller>
+                    <h1 className='text-center mt-5'>Our Recent Sales</h1>
+                    <Sales></Sales>
                 </div>
                 
             </div>
