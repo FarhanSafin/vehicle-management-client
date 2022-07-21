@@ -9,7 +9,7 @@ const AddVehicle = () => {
     const { register, handleSubmit } = useForm();
     const navigate = useNavigate();
     const onSubmit = data => {
-        const url = `https://nameless-anchorage-08422.herokuapp.com/addvehicle`;
+        const url = `https://vehicle-manage-t1.herokuapp.com/addvehicle`;
         fetch(url, { 
             method: 'POST',
             headers:{

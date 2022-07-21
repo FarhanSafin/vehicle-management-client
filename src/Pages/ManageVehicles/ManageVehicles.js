@@ -8,7 +8,7 @@ const ManageVehicles = () => {
     const handleDelete = id => {
         const proceed = window.confirm ('Are you sure?');
         if(proceed){
-            const url = `https://nameless-anchorage-08422.herokuapp.com/vehicle/${id}`;
+            const url = `https://vehicle-manage-t1.herokuapp.com/vehicle/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })
