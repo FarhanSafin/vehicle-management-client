@@ -12,7 +12,7 @@ const VehicleDetail = () => {
     const [vehicle, setVehicle] = useState({});
 
     useEffect(() => {
-        const url = `https://vehicle-manage-t1.herokuapp.com/vehicle/${vehicleId}`;
+        const url = `https://vehicle-management.onrender.com/vehicle/${vehicleId}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setVehicle(data));
@@ -30,7 +30,7 @@ const VehicleDetail = () => {
             const newSold = soldQuantity + 1;
             const newVehicle = {...vehicle, quantity: newQuantity, sold: newSold};
             setVehicle(newVehicle);
-            const url = `https://vehicle-manage-t1.herokuapp.com/vehicle/${id}`;
+            const url = `https://vehicle-management.onrender.com/vehicle/${id}`;
                 fetch(url, {
                     method:'PATCH',
                     headers:{
@@ -50,7 +50,7 @@ const VehicleDetail = () => {
         document.getElementById('restock-value').value = '';
         const newVehicle = {...vehicle, quantity: vehicleQuantity};
         setVehicle(newVehicle);
-        const url = `https://vehicle-manage-t1.herokuapp.com/vehicle/${id}`
+        const url = `https://vehicle-management.onrender.com/vehicle/${id}`
             fetch(url, {
                 method:'PATCH',
                 headers:{

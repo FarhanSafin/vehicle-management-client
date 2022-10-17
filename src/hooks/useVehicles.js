@@ -6,7 +6,7 @@ const useVehicles = () => {
     const [vehicles, setVehicles] = useState([]);
 
     useEffect(()=>{
-        fetch('https://vehicle-manage-t1.herokuapp.com/vehicleList')
+        fetch('https://vehicle-management.onrender.com/vehicleList')
         .then(res => res.json())
         .then(data => setVehicles(data));
     }, []);
